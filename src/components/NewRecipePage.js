@@ -75,10 +75,10 @@ export class NewRecipePage extends React.Component {
                         <Form.Control required type="text" name="lacation" onChange = {this.onValueChange} placeholder= "Podaj lokalizację przedmiotu"/>
                     </Form.Group> 
                     <Form.Group controlId="formDescription">
-                        <Form.Label>Recipe description</Form.Label>
+                        <Form.Label>Opis przedmiotu</Form.Label>
                         <Form.Control required as="textarea" rows="10" name="description" onChange = {this.onValueChange} />
                     </Form.Group>
-                    <Button variant="primary" type="submit">Save</Button>
+                    <Button variant="primary" type="submit">Dodaj</Button>
                 </Form>
             </div>
         );
