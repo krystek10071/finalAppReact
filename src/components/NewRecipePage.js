@@ -4,7 +4,7 @@ import Button from 'react-bootstrap/Button';
 
 import axios from 'axios';
 
-const apiBaseUrl = "http://localhost:3069/api/";
+const apiBaseUrl = "http://localhost:8080/new-advertise";
 
 export class NewRecipePage extends React.Component {
     constructor(props) {
@@ -13,30 +13,47 @@ export class NewRecipePage extends React.Component {
     
         this.state = {
           name: "",
-          author: "",
-          description: ""
+          price: "",
+          location: "",
+          province: "",
+          contactNumber: "",
+          category: "",
+          description : ""
         };
       }
 
     handleSubmit = event => {
+
         event.preventDefault();
+
         const headers = {
           'Content-Type': 'application/json',
           'Access-Control-Allow-Origin': '*' 
         }
+
         const payload = {
-          "name": this.state.name,
-          "author": this.state.author,
+          "title": this.state.name,
+          "price": this.state.price,
+          "location": this.state.description,
+          "province": this.state.province,
+          "contactNumber": this.state.contactNumber,
+          "category": this.state.category,
           "description": this.state.description
         }
-        axios.post(apiBaseUrl + 'recipe', payload, {headers: headers})
+
+        axios.post(apiBaseUrl, payload, {headers: headers})
         .then(function (response) {
-            alert("New recipe succesfully saved");
+            alert("Pomyślnie dodano nowe ogłoszenie");
         });
+
         this.setState({
             name: "",
-            author: "",
-            description: ""
+            price: "",
+            location: "",
+            province: "",
+            contactNumber: "",
+            category: "",
+            description : ""
           });
     }
 
@@ -51,11 +68,11 @@ export class NewRecipePage extends React.Component {
                 <Form onSubmit={this.handleSubmit}>
                     <Form.Group controlId="formAuthor">
                         <Form.Label>Tytuł</Form.Label>
-                        <Form.Control required type="text" name="author" onChange = {this.onValueChange} placeholder="Wprowadź tytuł ogłoszenia" />
+                        <Form.Control required type="text" name="name" onChange = {this.onValueChange} placeholder="Wprowadź tytuł ogłoszenia" />
                     </Form.Group>
                     <Form.Group controlId="formName">
                         <Form.Label>Cena</Form.Label>
-                        <Form.Control required type="text" name="name" onChange = {this.onValueChange} placeholder="Podaj cene przedmiotu" />
+                        <Form.Control required type="text" name="price" onChange = {this.onValueChange} placeholder="Podaj cene przedmiotu" />
                     </Form.Group>
                     <Form.Group controlId="formLocation">
                         <Form.Label>Lokalizacja</Form.Label>
@@ -72,7 +89,7 @@ export class NewRecipePage extends React.Component {
                     </Form.Group> 
                     <Form.Group controlId="formCategory">
                         <Form.Label>Kategoria</Form.Label>
-                        <Form.Control required type="text" name="lacation" onChange = {this.onValueChange} placeholder= "Podaj lokalizację przedmiotu"/>
+                        <Form.Control required type="text" name="category" onChange = {this.onValueChange} placeholder= "Podaj lokalizację przedmiotu"/>
                     </Form.Group> 
                     <Form.Group controlId="formDescription">
                         <Form.Label>Opis przedmiotu</Form.Label>
