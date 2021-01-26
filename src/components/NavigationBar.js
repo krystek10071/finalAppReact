@@ -10,9 +10,9 @@ export class NavigationBar extends React.Component {
                 <Navbar.Toggle aria-controls="basic-navbar-nav"/>
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav>
-                        <NavLink className="d-inline p-2 bg-dark text-white" to="/">Home</NavLink>
-                        <NavLink className="d-inline p-2 bg-dark text-white" to="/recipes">Recipes</NavLink>
-                        <NavLink className="d-inline p-2 bg-dark text-white" to="/createRecipe">Create new recipe</NavLink> 
+                        <NavLink className="d-inline p-2 bg-dark text-white" to="/">Strona główna</NavLink>
+                        <NavLink className="d-inline p-2 bg-dark text-white" to="/recipes">Ogłoszenia</NavLink>
+                        <NavLink className="d-inline p-2 bg-dark text-white" to="/createRecipe">Dodaj nowe ogłoszenia</NavLink> 
                     </Nav>
                 </Navbar.Collapse>
             </Navbar>
