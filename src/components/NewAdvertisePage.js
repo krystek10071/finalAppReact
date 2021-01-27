@@ -6,7 +6,7 @@ import axios from 'axios';
 
 const apiBaseUrl = "http://localhost:8080/new-advertise";
 
-export class NewRecipePage extends React.Component {
+export class NewAdvertisePage extends React.Component {
     constructor(props) {
         super(props);
         this.handleSubmit = this.handleSubmit.bind(this);

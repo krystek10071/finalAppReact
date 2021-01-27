@@ -4,7 +4,7 @@ import Button from 'react-bootstrap/Button';
 
 const apiBaseUrl = "http://localhost:8080/posts";
 
-export class RecipesPage extends React.Component {
+export class AdvertisesPage extends React.Component {
     constructor(props) {
         super(props);
         this.handleClick = this.handleClick.bind(this);
@@ -59,7 +59,7 @@ export class RecipesPage extends React.Component {
                         <tr key={advertise.id}>
                             <td valign="middle">{advertise.title}</td>
                             <td valign="middle">{advertise.location}</td>
-                            <td valign="middle">{advertise.price}</td>
+                            <td valign="middle">{advertise.price} zł</td>
                             <td width="15%" align="center"><Button onClick={this.handleClick({advertise})}>Pokaż szczegóły</Button></td>
                         </tr>
                         )}

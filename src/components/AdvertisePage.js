@@ -3,7 +3,7 @@ import React from 'react';
 
 
 
-export class RecipePage extends React.Component {
+export class AdvertisePage extends React.Component {
     constructor(props) {
         super(props);
         console.log(this.props.location.state.advertise.advertise._id)
