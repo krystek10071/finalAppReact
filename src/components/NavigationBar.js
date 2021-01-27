@@ -11,8 +11,8 @@ export class NavigationBar extends React.Component {
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav>
                         <NavLink className="d-inline p-2 bg-dark text-white" to="/">Strona główna</NavLink>
-                        <NavLink className="d-inline p-2 bg-dark text-white" to="/recipes">Ogłoszenia</NavLink>
-                        <NavLink className="d-inline p-2 bg-dark text-white" to="/createRecipe">Dodaj nowe ogłoszenia</NavLink> 
+                        <NavLink className="d-inline p-2 bg-dark text-white" to="/advertities">Ogłoszenia</NavLink>
+                        <NavLink className="d-inline p-2 bg-dark text-white" to="/createAdvertise">Dodaj nowe ogłoszenia</NavLink> 
                     </Nav>
                 </Navbar.Collapse>
             </Navbar>

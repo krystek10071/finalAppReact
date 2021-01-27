@@ -1,19 +1,11 @@
 import React from 'react';
-import {ButtonToolbar} from 'react-bootstrap';
-import {Button} from 'react-bootstrap';
-import {CommentModal} from './CommentModal'
-import {Card} from 'react-bootstrap';
 
-const apiBaseUrl = "http://localhost:8080/posts/";
 
-const divStyle = {
-    padding: '10px',
-  };
+
 
 export class RecipePage extends React.Component {
     constructor(props) {
         super(props);
-       // console.log(this.props.location.state.recipe.recipe._id);
         console.log(this.props.location.state.advertise.advertise._id)
         this.state = {
             advertise: this.props.location.state.advertise.advertise,
